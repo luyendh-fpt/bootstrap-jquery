@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="youtubeApp">
+<html ng-app="playlistApp">
 <head>
+	<meta charset="utf-8">
 	<title></title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body ng-controller="PlaylistController">
-	<div class="container-fluid">
-		<div class="page-header">
+<body ng-controller="playlistController">
+	<main class="container-fluid">
+		<header class="page-header">
 		  <h3>Youtube Partner <small>Created by C1707G</small></h3>
-		</div>
-
-		<div class="row">
+		</header>
+		<section class="row">
 			<div class="col-md-3 col-xs-12">
-				<!-- Navigation -->
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Upload</a></li>
-					<li class="active"><a href="#">Playlist</a></li>
-					<li><a href="#">Register</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Sitemap</a></li>
+				  <li><a href="#">Home</a></li>
+				  <li><a href="login.html">Login</a></li>
+				  <li class="active"><a href="playlist.html">Create Playlist</a></li>
+				  <li><a href="list-pl.html">List Playlist</a></li>
+				  <li><a href="#">Register</a></li>
+				  <li><a href="#">About us</a></li>
 				</ul>
 			</div>
 			<div class="col-md-9 col-xs-12">
@@ -33,10 +32,10 @@
 						<div class="form-group">
 							<label class="control-label col-md-3">Name</label>
 							<div class="col-md-8">
-								<input type="text" name="name" class="form-control" placeholder="Playlist name." ng-model="dataToSend.data.attributes.name">		{{ dataToSend.data.attributes.name }}			
+								<input type="text" name="name" class="form-control" placeholder="Playlist name." ng-model="dataToSend.data.attributes.name">		
 							</div>							
 						</div>
-						<div ="form-group">
+						<div class="form-group">
 							<label class="control-label col-md-3">Description</label>
 							<div class="col-md-8">
 								<textarea class="form-control" name="Description" ng-model="dataToSend.data.attributes.description"></textarea>
@@ -51,10 +50,9 @@
 						<div class="form-group">
 							<label class="control-label col-md-3"></label>
 							<div class="col-md-8">
-							<button type="button" class="btn btn-primary" id="btnSubmit" ng-click="doSubmit()">
+							<button type="button" class="btn btn-primary" ng-click="doSubmit()">
 								Submit
-							</button>
-							<button type="reset">Hello</button>
+							</button>							
 							<button type="reset" class="btn btn-default" >
 								Reset
 							</button>
@@ -64,15 +62,15 @@
 				  </div>
 				</div>				
 			</div>
-		</div>
-		<div class="page-footer text-center">
+		</section>
+		<footer class="page-footer text-center">
 			&copy; C1707G FPT Aptech
-		</div>
-	</div>	
+		</footer>
+	</main>	
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/playlist.js"></script>
 </body>
 </html>

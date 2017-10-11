@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="youtubeApp">
+<html ng-app="listplayApp">
 <head>
 	<title></title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body ng-controller="ListPLController">
+<body ng-controller="listPLController">
 	<div class="container-fluid">
 		<div class="page-header">
 		  <h3>Youtube Partner <small>Created by C1707G</small></h3>
@@ -15,27 +15,29 @@
 			<div class="col-md-3 col-xs-12">
 				<!-- Navigation -->
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Upload</a></li>
-					<li class="active"><a href="#">Playlist</a></li>
-					<li><a href="#">Register</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Sitemap</a></li>
+				  <li><a href="#">Home</a></li>
+				  <li><a href="login.html">Login</a></li>
+				  <li><a href="playlist.html">Create Playlist</a></li>
+				  <li class="active"><a href="list-pl.html">List Playlist</a></li>
+				  <li><a href="#">Register</a></li>
+				  <li><a href="#">About us</a></li>
 				</ul>
 			</div>
-			<div class="col-md-9 col-xs-12">
+			<div class="col-md-9 col-xs-12">				
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 				    <h3 class="panel-title">Playlist</h3>
 				  </div>
 				  <div class="panel-body">
-		    		<ul>
-					    <li ng-repeat="obj in arrayObject">
-					      <span>{{obj.attributes.name}}</span>
-					      <p>{{obj.attributes.description}}</p>
-					    </li>
-					  </ul>
-				  </div>
+				  		<div class="col-sm-6 col-md-4" ng-repeat="obj in playlist">
+				    <div class="thumbnail">
+				      <img src="{{obj.attributes.thumbnailUrl}}" alt="..." class="img-circle">
+				      <div class="caption">
+				        <h3>{{obj.attributes.name}}</h3>
+				        <p>{{obj.attributes.description}}</p>				       
+				      </div>
+				    </div>
+			  </div>
 				</div>				
 			</div>
 		</div>
@@ -47,6 +49,6 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/list-pl.js"></script>
 </body>
 </html>

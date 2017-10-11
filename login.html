@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="loginController">
+	<main class="container-fluid">
+		<header class="page-header">
+			<h3>Youtube Partner <small>Created by C1707G</small></h3>
+		</header>
+		<section class="row">
+			<div class="col-md-3">
+				<ul class="nav nav-pills nav-stacked">
+				  <li><a href="#">Home</a></li>
+				  <li class="active"><a href="login.html">Login</a></li>
+				  <li><a href="playlist.html">Create Playlist</a></li>
+				  <li><a href="list-pl.html">List Playlist</a></li>
+				  <li><a href="#">Register</a></li>
+				  <li><a href="#">About us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-9">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Login form</h3>
+				  </div>
+				  <div class="panel-body">
+				  	<form action="#" method="POST" class="form-horizontal">
+				  		<div class="form-group">
+				  			<label class="col-md-4 control-label">Username</label>
+				  			<div class="col-md-4">
+				  				<input type="text" name="username" class="form-control" placeholder="Enter your username" ng-model="dataToSend.data.attributes.username">
+				  			</div>
+				  		</div>
+				  		<div class="form-group">
+				  			<label class="col-md-4 control-label">Password</label>
+				  			<div class="col-md-4">
+				  				<input type="password" name="password" class="form-control" placeholder="Enter your password" ng-model="dataToSend.data.attributes.password">
+				  			</div>
+				  		</div>
+				  		<div class="form-group">
+				  			<label class="col-md-4 control-label">&nbsp;</label>
+				  			<div class="col-md-4">
+					  			<button type="button" class="btn btn-primary" ng-click="doLogin();">
+									Submit
+								</button>
+								<button type="reset" class="btn btn-default">
+									Reset
+								</button>
+								<button type="button" class="btn btn-default" ng-click="testLogin()">
+									Test
+								</button>
+							</div>
+				  		</div>
+				  	</form>
+				  </div>
+				</div>
+			</div>
+		</section>
+		<footer class="page-footer text-center">
+			&copy; FPT Aptech 2017
+		</footer>
+	</main>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
