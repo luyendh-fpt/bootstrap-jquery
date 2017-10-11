@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="youtubeApp">
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="PlaylistController">
+	<div class="container-fluid">
+		<div class="page-header">
+		  <h3>Youtube Partner <small>Created by C1707G</small></h3>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<!-- Navigation -->
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Upload</a></li>
+					<li class="active"><a href="#">Playlist</a></li>
+					<li><a href="#">Register</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Playlist Form</h3>
+				  </div>
+				  <div class="panel-body">
+			    	<form class="form-horizontal" name="register-form" ng-init="init()" action="hello" method="post">	   		
+						<div class="form-group">
+							<label class="control-label col-md-3">Name</label>
+							<div class="col-md-8">
+								<input type="text" name="name" class="form-control" placeholder="Playlist name." ng-model="dataToSend.data.attributes.name">		{{ dataToSend.data.attributes.name }}			
+							</div>							
+						</div>
+						<div ="form-group">
+							<label class="control-label col-md-3">Description</label>
+							<div class="col-md-8">
+								<textarea class="form-control" name="Description" ng-model="dataToSend.data.attributes.description"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-3">Thumbnail</label>
+							<div class="col-md-8">
+								<input type="text" name="thumbnail" class="form-control" placeholder="Thumbnail url." ng-model="dataToSend.data.attributes.thumbnailUrl">	
+							</div>							
+						</div>	
+						<div class="form-group">
+							<label class="control-label col-md-3"></label>
+							<div class="col-md-8">
+							<button type="button" class="btn btn-primary" id="btnSubmit" ng-click="doSubmit()">
+								Submit
+							</button>
+							<button type="reset">Hello</button>
+							<button type="reset" class="btn btn-default" >
+								Reset
+							</button>
+						</div>
+					</div>
+				</form>
+				  </div>
+				</div>				
+			</div>
+		</div>
+		<div class="page-footer text-center">
+			&copy; C1707G FPT Aptech
+		</div>
+	</div>	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
